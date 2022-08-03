@@ -2,6 +2,7 @@
 *  chapter 03
 */
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 // 1 bit = 0 or 1 => 2개
@@ -95,6 +96,23 @@ int main(void)
 	printf("%d\n", sizeof(double));
 	printf("%d\n", sizeof(long double));
 	printf("\n");
+
+	// *입력
+
+	int Number;
+
+	printf_s("입력 : ");
+	scanf_s("%d", &Number);
+
+	printf_s("입력받은 값 : %d\n\n", Number);
+
+	// 3-10 예제
+	int age;
+	double height;
+
+	printf("나이와 키를 입력하세요 : ");
+	scanf_s("%d%lf", &age, &height);
+	printf_s("나이는 %d살, 키는 %.1lfcm입니다.\n", age, height);
 
 	return 0;
 }

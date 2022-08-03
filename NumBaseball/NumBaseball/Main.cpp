@@ -11,6 +11,7 @@ int player[4];
 
 int main() {
 	
+	// com 랜덤넘버.
 	srand(time(NULL));
 	for (int i = 0; i < 4; i++) 
 	{
@@ -19,7 +20,7 @@ int main() {
 		{
 			continue;
 		}
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < i; j++)
 		{
 			if (com[i] == com[j])
 			{
@@ -28,6 +29,10 @@ int main() {
 		}
 	}
 	printf("%d,%d,%d,%d", com[0], com[1], com[2], com[3]);
+	
+	// 사용자 수 입력
+	printf("4자리 숫자를 입력하세요 : ");
+	scanf_s("%d", &player);
 
 	
 
