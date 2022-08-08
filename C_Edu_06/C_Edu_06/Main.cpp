@@ -55,16 +55,60 @@ int main(void)
 	{
 		do
 		{
-			printf("최오에 한번은 실행됨.");
+			// ** 최초 1회는 반드시 실행됨.
+			printf("최초에 한번은 실행됨.");
 			break;
+			// ** 그 후에 조건을 확인하고 조건이 true인 경우 반복.
 		} while (false);
-		printf("\n");
+		printf("\n\n");
 	}
 
+	//===========================================================================================
 
+	// [구구단]
+	// for문의 3단 중첩은 공간표현이라고 볼 수 있음. x, y, z;
+	{
+		int x, y;
+		printf("시작단 / 끝단 입력 : ");
+		scanf_s("%d %d", &x, &y);
 
+		for (int i = x; i < y; ++i)
+		{
+			if (i % 2 == 0)
+			{
+				continue;
+			}
+			else
+			{
+				for (int j = 1; j < 10; ++j)
+				{
+					// if(i % 2 || !(j % 2))
+					//		continue;
+					if (j % 2 != 0)
+					{
+						continue;
+					}
+					else
+					{
+						printf("%d * %d = %02d | ", i, j, i * j);
+					}
+				}
+			}
+			printf("\n");
+		}
+	}
 
-
+	{
+		for (int i = 0; i < 5; ++i)
+		{
+			for (int j = 0; j < 3; ++j)
+			{
+				printf("★");
+			}
+			printf("\n");
+		}
+		printf("\n\n");
+	}
 
 	return 0;
 }
