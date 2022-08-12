@@ -1,46 +1,56 @@
 #include <stdio.h>
 
+void Line(int, int, int);
+
 int main()
 {
-	// x자 별 그리기
-	{
-		for (int i = 0; i < 5; ++i)
-		{
-			for (int j = 0; j < 5; ++j)
-			{
-				if (i == j || (i + j) == 4)
-					printf("★");
-				else if (i != j)
-					printf(" ");
-			}
-			printf("\n");
-		}
-	}
+	int num1, num2, num3;
+	int count = 0;
 
-	int num;
-	printf("정수를입력하세요 : ");
-	scanf_s("%d", &num);
-	
-	
 
-	for (int i = 0; i < num; ++i)
-	{
-		bool flag = true;
-		for (int j = 0; j < i; ++j)
-		{
-			if (i % j == 0)
-			{
-				flag = false;
-			}
-		}
+	printf("정수 3개를 입력하세요 : ");
+	scanf_s("%d%d%d", &num1, &num2, &num3);
 
-		if (flag)
-		{
-			printf("%d", i);
-		}
-	}
+	Line(num1, num2, num3);
 
 
 
 	return 0;
+}
+
+void Line(int num1, int num2, int num3)
+{
+	if (num1 > num2 && num1 > num3)
+	{
+		if (num2 > num3)
+		{
+			printf("%d > %d > %d", num1, num2, num3);
+		}
+		else
+		{
+			printf("%d > %d > %d", num1, num3, num2);
+		}
+	}
+	else if (num2 > num1 && num2 > num3)
+	{
+		if (num1 > num3)
+		{
+			printf("%d > %d > %d", num2, num1, num3);
+		}
+		else
+		{
+			printf("%d > %d > %d", num2, num3, num1);
+		}
+	}
+	else if (num3 > num1 && num3 > num2)
+	{
+		if (num1 > num2)
+		{
+			printf("%d > %d > %d", num3, num1, num2);
+		}
+		else
+		{
+			printf("%d > %d > %d", num3, num1, num2);
+		}
+	}
 }
