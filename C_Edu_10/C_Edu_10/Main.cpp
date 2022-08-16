@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 void n()
 {
@@ -127,9 +128,17 @@ int main()
 			}
 			printf("\n");
 		}
+	}
+
+	{
+		char* Array = (char*)"�ܡܡܡܡܡܡܡܡܡ�";
 		
-		
-		
+		printf("%s\n", Array);
+
+		for (int i = 0; i < strlen(Array) + 1; i += 2)
+		{
+			printf("%c%c", Array[i], Array[i+1]);
+		}
 
 
 	}
