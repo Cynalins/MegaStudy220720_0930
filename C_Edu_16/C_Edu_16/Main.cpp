@@ -1,11 +1,4 @@
-/*
-* chapter 16
-*/
-#include "Define.h"
 #include "Functions.h"
-
-
-
 
 struct Object
 {
@@ -15,57 +8,76 @@ struct Object
 
 Object* CreateObject(bool _b);
 
-int main()
+int Count = 0;
+
+int main(void)
 {
-	printf("%f\n", PI);
+	//printf("%f\n", PI);
+	//Output("홍길동")
 	
-	Output("");
 	/*
 	{
-
 		Object* o = CreateObject(false);
-
-		if (!o) // *ERR 발생!
+		if (!o) // ** Err 발생 !!
 		{
-			ERR_MSG("경로");
+			ERRMSG("경로");
 			exit(0);
 		}
 	}
 	*/
+
+	/*
 	{
 		printf("두 수의 합은 : %d\n", SUM(10, 20));
 		printf("두 수의 곱은 : %d\n", MUL(10, 20));
 	}
-	
-	/*
-	//#if
-// ** 실행할 코드와 실행시키지 않을 코드를 구분.
-#ifndef 1
-
-#endif // !1
-
-#ifdef DEBUG
-	printf("DEBUG가 정의 되었습니다.\n");
-#else
-	printf("DEBUG가 정의되지 않았습니다.\n");
-
-#endif // DEBUG
-
 	*/
-	Count = 10;
+	
+
+//#if
+ 	   // ** 실행할 코드와 실행시키지 않을 코드를 구분.
+//#endif
+
+
+/*
+#ifndef 1
+#endif // !1
+*/
+
+
+
+/*
+//#define DEBUG
+#ifdef DEBUG
+	printf("DEBUG 정의 되었습니다.\n");
+#else
+	printf("DEBUG 정의되지 않았습니다.\n");
+#endif // DEBUG
+*/
+
+
+	Count = 100;
 	Func();
+
+
+
+
+
+
+//https://www.youtube.com/watch?v=BeoCbJPuvSE
 
 	return 0;
 }
 
+
+
+
 Object* CreateObject(bool _b)
 {
-	Object* obj;
+	Object* Obj = nullptr;
 
 	if (_b)
-		obj = (Object*)malloc(sizeof(Object));
-	else
-		obj = nullptr;
+		Obj = (Object*)malloc(sizeof(Object));
 
-	return obj;
+	return Obj;
 }
