@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <Windows.h>
+#include <stdlib.h>
 
 //** const
 // ** 상수화
@@ -22,15 +23,11 @@ struct Vector2
 	// ** 생성자 : 초기화를 시켜주어야한다.
 	Vector2() : x(0), y(0)
 	{
-		printf("생성자\n");
-		system("pause");
 	}
 
 	// ** 복사 생성자
 	Vector2(int _x, int _y) : x(_x), y(_y)
 	{
-		printf("복사 생성자\n");
-		system("pause");
 	}
 };
 
@@ -53,6 +50,9 @@ int main(void)
 	ShowCursor(false);
 
 	ULONGLONG Time = GetTickCount64();
+	ULONGLONG BulletDelay = GetTickCount64();
+
+	bool gameFlag = false;
 
 	// ** 플레이어 초기화
 	Object Player;
@@ -70,11 +70,20 @@ int main(void)
 	// Player.Scale.y = 1;
 
 
-	// ** 플레이어 초기화
-	Object Enemy;
-	Enemy.Position = Vector2(int(120 * 0.3333f * 2), 40 >> 1);
-	Enemy.Texture = (char*)"■";
-	Enemy.Scale = Vector2((int)strlen(Enemy.Texture), 1);
+	// ** 적 초기화
+	Object Enemy[128];
+
+	bool ShowEnemy[128];
+
+	for (int i = 0; i < 128; ++i)
+	{
+		srand(GetTickCount64() * GetTickCount64());
+		Enemy[i].Position = Vector2(int(120 * 0.3333f * 2), rand() % 40 + 1);
+		Enemy[i].Texture = (char*)"■";
+		Enemy[i].Scale = Vector2((int)strlen(Enemy[i].Texture), 1);
+
+		ShowEnemy[i] = false;
+	}
 
 	// Enemy.Position.x = int(120 * 0.3333f * 2);
 	// Enemy.Position.y = 40 >> 1;
@@ -102,21 +111,70 @@ int main(void)
 
 			printf("%s", Player.Texture);
 
-			// ** Enemy
-			SetCursorPosition(Enemy.Position.x, Enemy.Position.y);
-
-			printf("%s", Enemy.Texture);
-
-			// ** 충돌
-			if (Player.Position.x + 2 > Enemy.Position.x && 
-				Enemy.Position.x + 2 > Player.Position.x &&
-				Player.Position.y == Enemy.Position.y)
+			for (int i = 0; i < 128; ++i)
 			{
+				if (BulletDelay + 250 < GetTickCount64())
+				{
+					if (!ShowEnemy[i])
+					{
+						Enemy[i].Position.x = 118;
+						Enemy[i].Position.y = rand() % 40;
 
-				SetCursorPosition(120 >> 1, 1);
-				printf("충돌입니다.");
+						ShowEnemy[i] = true;
+
+						BulletDelay = GetTickCount64();
+
+						break;
+					}
+				}
 
 			}
+
+			for (int i = 0; i < 128; ++i)
+			{
+				if (ShowEnemy[i])
+				{
+					
+
+
+				}
+
+			}
+
+			for (int i = 0; i < 128; ++i)
+			{
+				// ** Enemy
+				SetCursorPosition(Enemy[i].Position.x, Enemy[i].Position.y);
+
+				printf("%s", Enemy[i].Texture);
+
+				if (Enemy[i].Position.x >= 0)
+				{
+					Enemy[i].Position.x--;
+				}
+				else
+				{
+					Enemy[i].Position.x = 120;
+					Enemy[i].Position.y = rand() % 40 + 1;
+				}
+
+				// ** 충돌
+				if (Player.Position.x + 2 > Enemy[i].Position.x &&
+					Enemy[i].Position.x + 2 > Player.Position.x &&
+					Player.Position.y == Enemy[i].Position.y)
+				{					
+					gameFlag = true;
+					break;
+				}
+			}
+			if (gameFlag)
+			{
+				SetCursorPosition(120 >> 1, 10);
+				printf("류다희");
+				break;
+			}
+			
+			
 
 		}
 	}
