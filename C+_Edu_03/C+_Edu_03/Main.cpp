@@ -43,7 +43,9 @@ int main(void)
 	Player.Position.x = 0;
 	Player.Position.y = 0;
 
-	Player.Scale.x = 2;
+	Player.Texture = (char*)"△";
+
+	Player.Scale.x = (int)strlen(Player.Texture);
 	Player.Scale.y = 1;
 
 
@@ -69,7 +71,7 @@ int main(void)
 		Bullet[i].Position.x = 118; // x좌표
 		Bullet[i].Position.y = rand() % 40; // y좌표
 		Bullet[i].Texture = (char*)"*"; // 총알 그림.
-		Bullet[i].Scale.x = 1;
+		Bullet[i].Scale.x = (int)strlen(Bullet[i].Texture);
 		Bullet[i].Scale.y = 1;
 
 		ShowBullet[i] = false; // 
@@ -78,7 +80,7 @@ int main(void)
 	bool gameFlag = false;
 
 	// ** 플레이어 Texture
-	Player.Texture = (char*)"△";
+	
 
 	// ** 루프
 	while (true)
@@ -147,14 +149,14 @@ int main(void)
 					// ** 충돌판정.
 					
 					// ** 크기값을 함께 설정해서 범위 충돌을 만들어야 함.
-					if (Bullet[i].Position.x == Player.Position.x && Bullet[i].Position.y == Player.Position.y)
+					if (Player.Position.x + Player.Scale.x < Bullet[i].Position.x &&
+						Player.Position.x > Bullet[i].Position.x + Bullet[i].Scale.x &&
+						Player.Position.y == Bullet[i].Position.y)
 					{
 					
-						ShowBullet[i] = false;
-						continue;
-						
-						//gameFlag = true;
-						//break;
+						ShowBullet[i] = false;						
+						gameFlag = true;
+						break;
 					}
 					
 					if (Bullet[i].Position.x <= 0)
@@ -173,11 +175,11 @@ int main(void)
 			}
 			if (gameFlag)
 			{
+				SetCursorPosition(120 >> 1, 20);
 				printf("류다희");
 				break;
 			}
-
-
+			
 		}
 	}
 
