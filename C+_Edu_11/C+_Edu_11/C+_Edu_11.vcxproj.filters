@@ -13,8 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\include">
-      <UniqueIdentifier>{1d435d2d-21a7-4968-a6dc-956ede61f726}</UniqueIdentifier>
+    <Filter Include="헤더 파일\Include">
+      <UniqueIdentifier>{dbf4db7d-a2d7-45ad-a2e8-fcf9a9804222}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -23,17 +23,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="struct.h">
-      <Filter>헤더 파일\include</Filter>
-    </ClInclude>
-    <ClInclude Include="headers.h">
+    <ClInclude Include="..\..\Common\headers.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Enum.h">
-      <Filter>헤더 파일\include</Filter>
+    <ClInclude Include="..\..\Common\Constant.h">
+      <Filter>헤더 파일\Include</Filter>
     </ClInclude>
-    <ClInclude Include="Constant.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="..\..\Common\Enum.h">
+      <Filter>헤더 파일\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\struct.h">
+      <Filter>헤더 파일\Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
