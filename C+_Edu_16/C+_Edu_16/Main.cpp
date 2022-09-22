@@ -13,7 +13,11 @@ int* Back;
 int size = 0;
 int capacity = 0; // 수용량. vector에 존재, 총사이즈의 int형 절반을 더 키워줌.
 
+
+
 void push_back(int _value);
+//** 중간 삽입
+void insert(int _where, int _value);
 void erase(int _where);
 void output();
 
@@ -33,6 +37,8 @@ int main(void)
 	printf("%d\n", *front);
 	printf("%d\n", *Back);
 	printf("%d\n", size);
+
+	insert(2, 25);
 
 	output();
 	/*
@@ -89,18 +95,45 @@ void push_back(int _value)
 		// ** Temp는 생성된 해당 영역을 빠져나가면 소멸된다.(스택)
 		// ** 하지만 할당된 메모리 주소는 front에 전달되어(남아) 있으므로 사용 가능.
 		front = Temp; // 변경후
-		// ** 시작지점의 주소가 바뀌었으므로 새롭게 셋팅 해준다.
-		Back = &front[size];
+		
+		
 	}
 
 	// ** 현재 위치에서는 항상 수용량이 남는다.
 	// ** size < capacity와 같은 상태이므로 원소 추가가 가능하다.
 	front[size] = _value;
 
+	// ** 마지막지점의 주소가 바뀌었으므로 새롭게 셋팅 해준다.
+	Back = &front[size];
+
 	// ** 원소가 추가되었으므로 size를 더해준다.
 	++size;
 }
 	
+void insert(int _where, int _value)
+{
+	if (capacity == size)
+	{
+		int result = (capacity >> 1); // 커패시터의 반
+		capacity += (result < 1) ? 1 : result;
+
+		int* Temp = (int*)malloc(sizeof(int) * capacity);
+		for (int i = 0; i < size - 1; ++i)
+			Temp[i] = front[i];
+		free(front);
+
+		front = Temp;	
+	}
+	--_where;
+
+	for (int i = _where; i > size; --i)
+		front[i + 1] = front[i];
+
+	front[_where] = _value;
+
+	Back = &front[size];
+	++size;
+}
 
 void output()
 {
