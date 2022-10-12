@@ -1,9 +1,12 @@
 #include "MainUpdate.h"
 
 
+int Test::Number;
+
 // ** 객체관리 클래스
 int main(void)
 {
+	
 	MainUpdate Main;
 	Main.Initialize();
 
@@ -22,6 +25,7 @@ int main(void)
 				break;
 		}
 	}
+	
 
 	return 0;
 }
