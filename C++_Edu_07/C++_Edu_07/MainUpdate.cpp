@@ -17,9 +17,11 @@ MainUpdate::~MainUpdate()
 
 void MainUpdate::Initialize()
 {
+	/*
 	SingletonManager* s1 = new SingletonManager;
 	SingletonManager* s2 = new SingletonManager;
 	SingletonManager* s3 = new SingletonManager;
+	*/
 
 
 	ObjectList[0] = SingletonManager::GetInstance()->CreatePlayer();
