@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일\singleton">
+      <UniqueIdentifier>{e8d07cc3-1a4a-4dfb-a7ab-54f1ed61e9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Object">
+      <UniqueIdentifier>{41667fe0-c10f-434b-b981-d2ac7199af99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Object\Player">
+      <UniqueIdentifier>{6c413fa3-67f2-4791-b3c7-70a34456940b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01">
+      <UniqueIdentifier>{731bd701-2f6b-4552-84d3-f0f247ee14cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01\Child">
+      <UniqueIdentifier>{6a837f69-2d0c-492d-a83d-a9dd79337b06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01\00.MainUpdate">
+      <UniqueIdentifier>{3cba26b7-f9c5-43d5-8d32-216991e9c68e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01\00.MainUpdate\99.Manager">
+      <UniqueIdentifier>{57ad96de-bf48-454e-944c-d72aeb5c3350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01\Scene">
+      <UniqueIdentifier>{6011f6d4-2671-4796-a445-e8d30d18ed70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01\Scene\LOGO">
+      <UniqueIdentifier>{1ead5146-b111-41ac-a7cd-f7bbc7b97466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01\Scene\MENU">
+      <UniqueIdentifier>{766e0902-c619-4937-9423-a7b5e81e6204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Class_01\Scene\STAGE">
+      <UniqueIdentifier>{177e4e68-a3f4-40f5-b46e-1fdf245f223c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>리소스 파일\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>리소스 파일\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>리소스 파일\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="cObject.cpp">
+      <Filter>리소스 파일\Class_01</Filter>
+    </ClCompile>
+    <ClCompile Include="Child.cpp">
+      <Filter>리소스 파일\Class_01\Child</Filter>
+    </ClCompile>
+    <ClCompile Include="MainUpdate.cpp">
+      <Filter>리소스 파일\Class_01\00.MainUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="ScanManager.cpp">
+      <Filter>리소스 파일\Class_01\00.MainUpdate\99.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>리소스 파일\Class_01\Scene\STAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>리소스 파일\Class_01\Scene\MENU</Filter>
+    </ClCompile>
+    <ClCompile Include="Logo.cpp">
+      <Filter>리소스 파일\Class_01\Scene\LOGO</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>리소스 파일\Class_01\Scene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>리소스 파일\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>리소스 파일\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>리소스 파일\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="cObject.h">
+      <Filter>리소스 파일\Class_01</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Child.h">
+      <Filter>리소스 파일\Class_01\Child</Filter>
+    </ClInclude>
+    <ClInclude Include="MainUpdate.h">
+      <Filter>리소스 파일\Class_01\00.MainUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="ScanManager.h">
+      <Filter>리소스 파일\Class_01\00.MainUpdate\99.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>리소스 파일\Class_01\Scene\STAGE</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>리소스 파일\Class_01\Scene\MENU</Filter>
+    </ClInclude>
+    <ClInclude Include="Logo.h">
+      <Filter>리소스 파일\Class_01\Scene\LOGO</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>리소스 파일\Class_01\Scene</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

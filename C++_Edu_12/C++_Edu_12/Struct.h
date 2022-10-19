@@ -1,0 +1,15 @@
+#pragma once
+
+struct Vector3
+{
+	float x, y, z;
+
+	Vector3() : x(0), y(0), z(0) {};
+
+	Vector3(const float& _x, const float& _y) : x(_x), y(_y), z(0) {};
+
+	Vector3(const float& _x, const float& _y, const float& _z) : x(_x), y(_y), z(_z) {};
+
+	
+
+};
