@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일\SceneManager">
+      <UniqueIdentifier>{d8bdab63-4c19-4f50-be99-2f4be942df0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene">
+      <UniqueIdentifier>{18e29af5-122c-4da0-8d7f-43c3f72c4627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\Logo">
+      <UniqueIdentifier>{4b5e3f82-8ae0-4220-be78-4fdbb994cc6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\Menu">
+      <UniqueIdentifier>{0dd03f93-3b03-4ffe-9919-0c608d25c3f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\Stage">
+      <UniqueIdentifier>{a1db9632-f24d-4d79-8a1f-9ffef1d009ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Object">
+      <UniqueIdentifier>{c2d9fbbf-2cd9-4bde-bb52-8c04c6962457}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>리소스 파일\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>리소스 파일\Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>리소스 파일\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>리소스 파일\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
