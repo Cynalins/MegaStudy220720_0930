@@ -16,11 +16,35 @@
     <Filter Include="리소스 파일\MainUpdate">
       <UniqueIdentifier>{ced2339b-194b-41f3-8f80-0ae3828c7d7a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일\Stage">
-      <UniqueIdentifier>{876105af-0365-4d48-b291-69c4c4a02d96}</UniqueIdentifier>
-    </Filter>
     <Filter Include="리소스 파일\Object">
       <UniqueIdentifier>{85195b51-2b67-40c0-a97c-329dd80342e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene">
+      <UniqueIdentifier>{3309c910-4883-467e-9f33-8b92ad34959a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\LOGO">
+      <UniqueIdentifier>{b469744f-144a-49f4-a6af-cc3dc185fe13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\MENU">
+      <UniqueIdentifier>{cda0158f-c750-4ed5-8b80-6ed178db5633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\STAGE">
+      <UniqueIdentifier>{5ce691d0-49dd-436d-9cb6-147a570d7162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Child">
+      <UniqueIdentifier>{49a812cc-cacb-4442-ba69-43ba1c29b1a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager">
+      <UniqueIdentifier>{1f0bd8f4-9b10-469e-8423-faf9688abdfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager\SceneManager">
+      <UniqueIdentifier>{ba9ac33b-7d23-400a-bd44-f8656485ecfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager\ObjectManager">
+      <UniqueIdentifier>{cb8cf7d4-49dd-49f1-a6db-fd3cbaa3632b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager\CusorManager">
+      <UniqueIdentifier>{1a3fe8a4-fc53-412d-a0d4-b8c1df5ccd9d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,14 +57,26 @@
     <ClCompile Include="Object.cpp">
       <Filter>리소스 파일\Object</Filter>
     </ClCompile>
-    <ClCompile Include="Stage.cpp">
-      <Filter>리소스 파일\Stage</Filter>
-    </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>리소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Logo.cpp">
+      <Filter>리소스 파일\Scene\LOGO</Filter>
     </ClCompile>
     <ClCompile Include="Child.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>리소스 파일\Child</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>리소스 파일\Scene\STAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>리소스 파일\Scene\MENU</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>리소스 파일\Manager\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>리소스 파일\Manager\ObjectManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,14 +92,32 @@
     <ClInclude Include="Object.h">
       <Filter>리소스 파일\Object</Filter>
     </ClInclude>
-    <ClInclude Include="Stage.h">
-      <Filter>리소스 파일\Stage</Filter>
+    <ClInclude Include="Enum.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>리소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Logo.h">
+      <Filter>리소스 파일\Scene\LOGO</Filter>
     </ClInclude>
     <ClInclude Include="Child.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>리소스 파일\Child</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>리소스 파일\Scene\STAGE</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>리소스 파일\Scene\MENU</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>리소스 파일\Manager\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>리소스 파일\Manager\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorManager.h">
+      <Filter>리소스 파일\Manager\CusorManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 #pragma once
-#include "Object.h"
+#include "Scene.h"
 
-class Child : public Object
+class Menu : public Scene
 {
 public:
 	virtual void Start()override;
@@ -9,7 +9,7 @@ public:
 	virtual void Render()override;
 	virtual void Release()override;
 public:
-	Child();
-	virtual ~Child();
+	Menu();
+	~Menu();
 };
 

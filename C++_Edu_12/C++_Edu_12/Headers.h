@@ -4,3 +4,6 @@
 #include <Windows.h>
 
 using namespace std;
+
+#include "Struct.h"
+#include "Enum.h"

@@ -7,11 +7,17 @@ int main()
 
 	while (true)
 	{
-		if(Time)
+		if (Time < GetTickCount64())
+		{
+			system("cls");
 
-			Obect풀 에관하여.
+			Time = GetTickCount64();
+		}
+
+			//Obect풀 에관하여.
 
 		// 정적화
+			/*
 		else
 		{
 			if ()
@@ -19,6 +25,7 @@ int main()
 
 			}
 		}
+			*/
 	}
 
 
