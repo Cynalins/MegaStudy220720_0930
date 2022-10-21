@@ -31,6 +31,18 @@
     <Filter Include="리소스 파일\Object">
       <UniqueIdentifier>{c2d9fbbf-2cd9-4bde-bb52-8c04c6962457}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\ObjectManager">
+      <UniqueIdentifier>{42ebecc7-3720-46a1-b815-c3ac8a39c2fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Child">
+      <UniqueIdentifier>{d843c815-8c73-4684-ba63-e111941a6ca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\MainUpdate">
+      <UniqueIdentifier>{80eaf8b0-c204-4bbb-a1ef-0e1d0a3913bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\CursorManager">
+      <UniqueIdentifier>{7de72845-4f65-477f-bb51-42d1958883c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -41,6 +53,27 @@
     </ClCompile>
     <ClCompile Include="Object.cpp">
       <Filter>리소스 파일\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>리소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Logo.cpp">
+      <Filter>리소스 파일\Scene\Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>리소스 파일\Scene\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>리소스 파일\Scene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>리소스 파일\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Child.cpp">
+      <Filter>리소스 파일\Child</Filter>
+    </ClCompile>
+    <ClCompile Include="MainUpdate.cpp">
+      <Filter>리소스 파일\MainUpdate</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +90,33 @@
       <Filter>리소스 파일\Object</Filter>
     </ClInclude>
     <ClInclude Include="Enum.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>리소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Logo.h">
+      <Filter>리소스 파일\Scene\Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>리소스 파일\Scene\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>리소스 파일\Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>리소스 파일\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Child.h">
+      <Filter>리소스 파일\Child</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorManager.h">
+      <Filter>리소스 파일\CursorManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MainUpdate.h">
+      <Filter>리소스 파일\MainUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="constant.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,4 +1,7 @@
 #include "SceneManager.h"
+#include "Logo.h"
+#include "Menu.h"
+#include "Stage.h"
 
 SceneManager* SceneManager::Instance = nullptr;
 
@@ -27,23 +30,26 @@ void SceneManager::SetScene(SceneID _SceneID)
 		break;
 	case MenuID:
 		SceneState = new Menu;
+		break;
 	case StageID:
 		SceneState = new Stage;
+		break;
 	case ExitID:
 		exit(NULL);
 		break;
 	}
 	
+	SceneState->Start();
 }
 
 void SceneManager::Update()
 {
-	SceneState
+	SceneState->Update();
 }
 
 void SceneManager::Render()
 {
-
+	SceneState->Render();
 }
 
 void SceneManager::Release()
