@@ -10,6 +10,16 @@ enum SceneID
 {
 	LogoID,
 	MenuID,
-	StageID,
+	EasyStageID,
+	NormalStageID,
+	HardStageID,
 	ExitID,
+};
+
+enum DirectoinPoint
+{
+	UPPOINT,
+	DOWNPOINT,
+	LEFTPOINT,
+	RIGHTPOINT,
 };

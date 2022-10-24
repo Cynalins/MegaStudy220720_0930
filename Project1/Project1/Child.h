@@ -1,19 +1,15 @@
 #pragma once
-#include "Scene.h"
+#include "Object.h"
 
-class Stage : public Scene
+class Child : public Object
 {
-private:
-	Transform Info;
-	int color;
-	string str;
 public:
 	void Start()override;
 	void Update()override;
 	void Render()override;
 	void Release()override;
 public:
-	Stage();
-	~Stage();
+	Child();
+	virtual ~Child();
 };
 

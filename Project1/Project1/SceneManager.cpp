@@ -2,8 +2,6 @@
 #include "Logo.h"
 #include "Menu.h"
 #include "Stage.h"
-#include "NormalStage.h"
-#include "HardStage.h"
 
 SceneManager* SceneManager::Instance = nullptr;
 
@@ -16,7 +14,6 @@ SceneManager::~SceneManager()
 {
 	Release();
 }
-
 void SceneManager::SetScene(SceneID _SceneID)
 {
 	if (SceneState != nullptr)
@@ -27,26 +24,19 @@ void SceneManager::SetScene(SceneID _SceneID)
 
 	switch (_SceneID)
 	{
-	case LogoID:
+	case LOGOID:
 		SceneState = new Logo;
 		break;
-	case MenuID:
+	case MENUID:
 		SceneState = new Menu;
 		break;
-	case EasyStageID:
+	case STAGEID:
 		SceneState = new Stage;
 		break;
-	case NormalStageID:
-		SceneState = new NormalStage;
-		break;
-	case HardStageID:
-		SceneState = new HardStage;
-		break;
-	case ExitID:
+	case EXITID:
 		exit(NULL);
 		break;
 	}
-	
 	SceneState->Start();
 }
 
