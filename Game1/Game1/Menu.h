@@ -4,8 +4,8 @@
 class Menu : public Scene
 {
 private:
-	Transform Info;
-	int color;
+	Transform Info, Info2;
+	int color, color2;
 public:
 	void Start()override;
 	void Update()override;

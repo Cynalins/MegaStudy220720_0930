@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Child.cpp" />
-    <ClCompile Include="HardStage.cpp" />
     <ClCompile Include="Logo.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainUpdate.cpp" />
@@ -157,7 +156,6 @@
     <ClInclude Include="constant.h" />
     <ClInclude Include="CursorManager.h" />
     <ClInclude Include="Enum.h" />
-    <ClInclude Include="HardStage.h" />
     <ClInclude Include="Headers.h" />
     <ClInclude Include="Logo.h" />
     <ClInclude Include="MainUpdate.h" />

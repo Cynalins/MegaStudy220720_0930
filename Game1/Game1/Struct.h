@@ -22,3 +22,9 @@ struct Transform
 	Vector3 Rotation;
 	Vector3 Scale;
 };
+
+struct SliderTransform
+{
+	Transform Info;
+	string Texture;
+};

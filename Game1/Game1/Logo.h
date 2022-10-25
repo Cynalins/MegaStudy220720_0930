@@ -9,6 +9,8 @@ private:
 	ULONGLONG Time;
 	ULONGLONG DelayTime;
 	int switching;
+
+	SliderTransform Sliders[27];
 public:
 	void Start()override;
 	void Update()override;

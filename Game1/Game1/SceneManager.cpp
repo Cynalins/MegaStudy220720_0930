@@ -3,7 +3,7 @@
 #include "Menu.h"
 #include "Stage.h"
 #include "NormalStage.h"
-#include "HardStage.h"
+
 
 SceneManager* SceneManager::Instance = nullptr;
 
@@ -39,10 +39,8 @@ void SceneManager::SetScene(SceneID _SceneID)
 	case NormalStageID:
 		SceneState = new NormalStage;
 		break;
-	case HardStageID:
-		SceneState = new HardStage;
-		break;
 	case ExitID:
+		printf("프로그램을 종료합니다.");
 		exit(NULL);
 		break;
 	}

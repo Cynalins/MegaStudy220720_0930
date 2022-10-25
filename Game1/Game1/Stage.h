@@ -5,8 +5,9 @@ class Stage : public Scene
 {
 private:
 	Transform Info;
-	int color;
-	string str;
+	int color, color2;
+	int count;
+	int Atari;
 public:
 	void Start()override;
 	void Update()override;

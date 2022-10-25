@@ -78,9 +78,6 @@
     <ClCompile Include="NormalStage.cpp">
       <Filter>리소스 파일\Scene\Stage</Filter>
     </ClCompile>
-    <ClCompile Include="HardStage.cpp">
-      <Filter>리소스 파일\Scene\Stage</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
@@ -126,9 +123,6 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="NormalStage.h">
-      <Filter>리소스 파일\Scene\Stage</Filter>
-    </ClInclude>
-    <ClInclude Include="HardStage.h">
       <Filter>리소스 파일\Scene\Stage</Filter>
     </ClInclude>
   </ItemGroup>
