@@ -149,6 +149,7 @@
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="ShootStage.cpp" />
     <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +166,7 @@
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ShootStage.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Struct.h" />
   </ItemGroup>

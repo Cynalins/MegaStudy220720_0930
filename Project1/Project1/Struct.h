@@ -22,3 +22,9 @@ struct Transform
 	Vector3 Rotation;
 	Vector3 Scale;
 };
+
+struct Players
+{
+	Vector3 Info;
+	string Texture;
+};

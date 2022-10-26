@@ -7,3 +7,9 @@ enum SceneID
 	STAGEID,
 	EXITID,
 };
+
+enum ObjectID
+{
+	PlayerID,
+
+};

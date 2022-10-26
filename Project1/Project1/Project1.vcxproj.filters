@@ -16,9 +16,6 @@
     <Filter Include="리소스 파일\Scene">
       <UniqueIdentifier>{0c36ae3a-6b7c-450d-bcc5-0306a60d5229}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일\SceneManager">
-      <UniqueIdentifier>{ec22d857-09bd-434e-abde-586f08499153}</UniqueIdentifier>
-    </Filter>
     <Filter Include="리소스 파일\Scene\Logo">
       <UniqueIdentifier>{c7b452b4-a7ab-4f30-bd18-9f2ec7940369}</UniqueIdentifier>
     </Filter>
@@ -37,8 +34,20 @@
     <Filter Include="리소스 파일\Child">
       <UniqueIdentifier>{a7e095c7-348e-4125-a821-31f340e67ed4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="리소스 파일\ObjectManager">
+    <Filter Include="리소스 파일\Object\Player">
+      <UniqueIdentifier>{273a1084-7aed-4a58-acda-cc34375e50e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager">
+      <UniqueIdentifier>{f7d9bfee-e048-4c6a-b32c-f0f0a419e818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager\CursorManager">
+      <UniqueIdentifier>{c53dfd5d-9dc1-457c-ad37-16ac15f589b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager\ObjectManager">
       <UniqueIdentifier>{fc354d57-6ea9-44a4-9566-b40eaadfda30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager\SceneManager">
+      <UniqueIdentifier>{ec22d857-09bd-434e-abde-586f08499153}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -49,7 +58,7 @@
       <Filter>리소스 파일\Scene</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
-      <Filter>리소스 파일\SceneManager</Filter>
+      <Filter>리소스 파일\Manager\SceneManager</Filter>
     </ClCompile>
     <ClCompile Include="Stage.cpp">
       <Filter>리소스 파일\Scene\Stage</Filter>
@@ -70,7 +79,10 @@
       <Filter>리소스 파일\Child</Filter>
     </ClCompile>
     <ClCompile Include="ObjectManager.cpp">
-      <Filter>리소스 파일\ObjectManager</Filter>
+      <Filter>리소스 파일\Manager\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>리소스 파일\Object\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +99,7 @@
       <Filter>리소스 파일\Scene</Filter>
     </ClInclude>
     <ClInclude Include="SceneManager.h">
-      <Filter>리소스 파일\SceneManager</Filter>
+      <Filter>리소스 파일\Manager\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="Stage.h">
       <Filter>리소스 파일\Scene\Stage</Filter>
@@ -108,7 +120,13 @@
       <Filter>리소스 파일\Child</Filter>
     </ClInclude>
     <ClInclude Include="ObjectManager.h">
-      <Filter>리소스 파일\ObjectManager</Filter>
+      <Filter>리소스 파일\Manager\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>리소스 파일\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorManager.h">
+      <Filter>리소스 파일\Manager\CursorManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

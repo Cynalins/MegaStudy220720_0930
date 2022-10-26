@@ -3,6 +3,9 @@
 
 class Object
 {
+protected:
+	Transform Info;
+	int color;
 public:
 	virtual void Start()PURE;
 	virtual void Update()PURE;

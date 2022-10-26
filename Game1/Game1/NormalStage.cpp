@@ -46,15 +46,10 @@ void NormalStage::Update()
 
     if (Atari == 5 || count == 12)
     {
-        color = 0;
-        color2 = 7;
-        count == 12;
+        SceneManager::GetInstance()->SetScene(ShootStageID);
     }      
 
-    if (color2 == 7 && GetAsyncKeyState(VK_SPACE))
-        SceneManager::GetInstance()->SetScene(MenuID);
-    if (GetAsyncKeyState(VK_ESCAPE))
-        SceneManager::GetInstance()->SetScene(ExitID);
+    
 
 }
 
@@ -74,14 +69,6 @@ CursorManager::Renderer(Info.Position.x, Info.Position.y + 4, "$$ |             
 CursorManager::Renderer(Info.Position.x, Info.Position.y + 5, "#__|                  ", color);
 
 
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 6, "                             $$$$$$#  ",color2);
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 7, "                            $$$ __$$# ",color2);
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 8, " $$$$$$#  $$$$# $$$$#       $$$$# $$ |",color2);
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 9, "$$  __$$# #____|#____|      $$#$$#$$ |",color2);
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 10, "$$ |  #__|$$$$# $$$$#       $$ #$$$$ |",color2);
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 11, "$$ |      #____|#____|      $$ |#$$$ |",color2);
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 12, "$$ |                        #$$$$$$  /",color2);
-CursorManager::Renderer(Info.Position.x, Info.Position.y + 13, "#__|                         #______/ ",color2);
 
 }
 

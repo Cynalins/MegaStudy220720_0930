@@ -1,5 +1,6 @@
 #include "Menu.h"
 #include "SceneManager.h"
+#include "Player.h"
 
 Menu::Menu()
 {
@@ -21,6 +22,7 @@ void Menu::Update()
 
 void Menu::Render()
 {
+	cout << "플레이어 : " << & Player::Render << endl;
 	cout << "Menu" << endl;
 }
 

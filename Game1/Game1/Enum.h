@@ -12,7 +12,7 @@ enum SceneID
 	MenuID,
 	EasyStageID,
 	NormalStageID,
-	HardStageID,
+	ShootStageID,
 	ExitID,
 };
 

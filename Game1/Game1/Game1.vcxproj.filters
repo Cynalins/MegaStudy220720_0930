@@ -43,6 +43,15 @@
     <Filter Include="리소스 파일\CursorManager">
       <UniqueIdentifier>{7de72845-4f65-477f-bb51-42d1958883c9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\Scene\Stage\ShootStage">
+      <UniqueIdentifier>{dc489297-111f-4c9c-ada6-8b3cdeb30258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\Stage\Bullet6">
+      <UniqueIdentifier>{48c757b6-9735-4098-80fc-39b9b365c8d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Scene\Stage\Bullet12">
+      <UniqueIdentifier>{5029e758-445f-4311-902d-a47619accaa3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -63,9 +72,6 @@
     <ClCompile Include="Menu.cpp">
       <Filter>리소스 파일\Scene\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="Stage.cpp">
-      <Filter>리소스 파일\Scene\Stage</Filter>
-    </ClCompile>
     <ClCompile Include="ObjectManager.cpp">
       <Filter>리소스 파일\ObjectManager</Filter>
     </ClCompile>
@@ -76,7 +82,13 @@
       <Filter>리소스 파일\MainUpdate</Filter>
     </ClCompile>
     <ClCompile Include="NormalStage.cpp">
-      <Filter>리소스 파일\Scene\Stage</Filter>
+      <Filter>리소스 파일\Scene\Stage\Bullet12</Filter>
+    </ClCompile>
+    <ClCompile Include="ShootStage.cpp">
+      <Filter>리소스 파일\Scene\Stage\ShootStage</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>리소스 파일\Scene\Stage\Bullet6</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,9 +116,6 @@
     <ClInclude Include="Menu.h">
       <Filter>리소스 파일\Scene\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="Stage.h">
-      <Filter>리소스 파일\Scene\Stage</Filter>
-    </ClInclude>
     <ClInclude Include="ObjectManager.h">
       <Filter>리소스 파일\ObjectManager</Filter>
     </ClInclude>
@@ -123,7 +132,13 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="NormalStage.h">
-      <Filter>리소스 파일\Scene\Stage</Filter>
+      <Filter>리소스 파일\Scene\Stage\Bullet12</Filter>
+    </ClInclude>
+    <ClInclude Include="ShootStage.h">
+      <Filter>리소스 파일\Scene\Stage\ShootStage</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>리소스 파일\Scene\Stage\Bullet6</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
