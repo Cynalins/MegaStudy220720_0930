@@ -66,22 +66,22 @@ int main()
 	obj->Kor = 90;
 	obj->Math = 70;
 
-	vector<Object> Objects1;
+	//vector<Object> Objects1;
 	vector<Object*> pObject;
+	/*
 	vector<int> Objects;
 	Objects.push_back(obj->Eng);
 	Objects.push_back(obj->Kor);
 	Objects.push_back(obj->Math);
+	*/
+	pObject.push_back();
 
-	Objects.begin();
-	Objects.end();
+	pObject.begin();
+	pObject.end();
 
-	Objects.pop_back();
+	pObject.pop_back();
 
-	for (int i = 0; i < Objects.size(); ++i)
-	{
-		cout << Objects[i] << endl;
-	}
+	
 
 
 	return 0;
