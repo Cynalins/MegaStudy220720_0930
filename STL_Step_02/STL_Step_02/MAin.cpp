@@ -132,7 +132,7 @@ int main()
 		}
 	}
 	*/
-	/*
+	
 	{
 		// ** 원하는 위치의 값을 삭제 한다.
 		for(vector<Object*>::iterator iter = Objects.begin(); iter != Objects.end();)
@@ -154,7 +154,7 @@ int main()
 		}
 		// 따라서 ++iter를 for문안에 입력하면 중간의 값을 건너뛰어버림.
 	}
-	*/
+	
 	
 	// erase, clear는 데이터를 지우는 것이 아니라 포인터이다. -> 지우려면 delete필요
 
