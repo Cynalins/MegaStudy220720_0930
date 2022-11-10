@@ -1,6 +1,7 @@
 #include "Headers.h"
 #include "Alatreon.h"
 #include "ObjectPool.h"
+#include "Prototype.h"
 
 // ** DesignPattern
 // ** ObjectPool Pattern : 재활용패턴
@@ -8,6 +9,23 @@
 
 int main(void)
 {
+	Prototype::GetInstance()->Initialize();
+	{
+		Object* pObj = new Alatreon;
+		pObj->Start();
+		pObj->SetKey("Enemy");
+
+		// Prototype::GetInstance()->AddProtoTypeObject(pObj);
+		if (Prototype::GetInstance()->AddProtoTypeObject(pObj))
+		{
+			// continue;
+			// break;
+
+			// return;
+		}
+
+	}
+
 	list<Object*>* ObjectList = ObjectPool::GetInstance()->GetDesableObjectList("Alatreon");
 
 	if (ObjectList == nullptr)
