@@ -1,5 +1,6 @@
 #include "Prototype.h"
 #include "Alatreon.h"
+#include "ObjectManager.h"
 
 Prototype* Prototype::Instance = nullptr;
 
@@ -18,6 +19,7 @@ void Prototype::Initialize()
 	INFO Info = INFO(0, 0, 0);
 	{
 		Object* Obj = (new Alatreon(Info))->Initialize();
+		ObjectManager::GetInstance()->SetObjects(Obj);
 		//Object* Obj = (new Alatreon)->Initialize(Info);
 		ProtoTypeObject[Obj->GetKey()] = Obj;
 	}
@@ -30,7 +32,7 @@ bool Prototype::AddProtoTypeObject(Object* object)
 	map<string, Object*>::iterator iter = ProtoTypeObject.find(object->GetKey());
 	if (iter != ProtoTypeObject.end())
 	{
-		cout << "Message : " << object->GetKey() << "오브젝트는 이미 존재 합니다." << endl;
+		//cout << "Message : " << object->GetKey() << "오브젝트는 이미 존재 합니다." << endl;
 		return false;
 	}
 	ProtoTypeObject.insert(make_pair(object->GetKey(), object));

@@ -10,7 +10,7 @@ public:
 	void Render()override;
 	void OnDestroy(Object* pObj)override;
 public: // 함수를 클래스 내부에 직접 입력하면 먼저 처리된다.
-	virtual Object* Clone()override
+	virtual Object* Clone()override // 복사처리
 	{
 		return new Alatreon(*this);
 	}

@@ -4,7 +4,6 @@
 
 ObjectPool* ObjectPool::Instance = nullptr;
 
-
 ObjectPool::ObjectPool()
 {
 
@@ -30,26 +29,22 @@ list<Object*>* ObjectPool::GetDesableObjectList(string key)
 
 void ObjectPool::addEnableObjectList(Object* pObj, ListType type)
 {
-	map<string, list<Object*>> mapList = nullptr;
+	map<string, list<Object*>> mapList;
 
 	if (type == ListType::Enable)
-	{
-		mapList = &EnableList;
-	}
+		mapList = EnableList;
 	else
-	{
-		mapList = &DesableList;
-	}
-	
+		mapList = DesableList;
+
 	// ** 오브젝트가 담겨야 할 공간이 이미 존재하는지 탐색
 	auto iter = mapList.find(pObj->GetKey());
 
 	// ** 존재하지 않는다면 새로운 공간을 확보하고 추가한다.
 	if (iter == mapList.end())
 	{
-		list<Object*>* temp = new list<Object*>();
-		temp->push_back(pObj);
-		mapList->insert(make_pair(pObj->GetKey(), temp));
+		list<Object*> temp;
+		temp.push_back(pObj);
+		mapList.insert(make_pair(pObj->GetKey(), temp));
 	}
 	else // ** 존재 한다면 그 해당 위치에 객체를 넣는다.
 		iter->second.push_back(pObj);
@@ -57,7 +52,6 @@ void ObjectPool::addEnableObjectList(Object* pObj, ListType type)
 
 void ObjectPool::CreateObjectList()
 {
-	
 	/*
 	list<Object*>* pList = GetDesableObjectList("Alatreon");
 	if (pList == nullptr)
@@ -106,8 +100,7 @@ void ObjectPool::Update()
 			}
 			else
 				++iter2;
-		}
-			
+		}	
 	}
 }
 

@@ -31,6 +31,12 @@
     <Filter Include="리소스 파일\DesignPattern\Prototype">
       <UniqueIdentifier>{6ab43fef-30e1-4632-bed3-90e7ec6fd99e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\Manager">
+      <UniqueIdentifier>{5cbd3f22-4334-4f82-ba07-096417b7d39d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일\Manager\ObjectManager">
+      <UniqueIdentifier>{cacb3012-9049-4cae-971a-9c42b2f8e9dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -47,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="Prototype.cpp">
       <Filter>리소스 파일\DesignPattern\Prototype</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>리소스 파일\Manager\ObjectManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="Prototype.h">
       <Filter>리소스 파일\DesignPattern\Prototype</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>리소스 파일\Manager\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

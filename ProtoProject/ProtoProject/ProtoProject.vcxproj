@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1dce6afa-1bbc-4561-8662-a21220a0fc47}</ProjectGuid>
-    <RootNamespace>STLStep07</RootNamespace>
+    <ProjectGuid>{2546a62d-23cd-433a-9fbb-39f788f58fc3}</ProjectGuid>
+    <RootNamespace>ProtoProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,23 +139,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Alatreon.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Logo.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainUpdate.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
-    <ClCompile Include="ObjectPool.cpp" />
-    <ClCompile Include="Prototype.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Alatreon.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="Enum.h" />
     <ClInclude Include="Headers.h" />
-    <ClInclude Include="Main.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Logo.h" />
+    <ClInclude Include="MainUpdate.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectManager.h" />
-    <ClInclude Include="ObjectPool.h" />
-    <ClInclude Include="Prototype.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="Struct.h" />
-    <ClInclude Include="Enum.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

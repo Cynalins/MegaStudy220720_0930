@@ -5,52 +5,69 @@
 
 // ** DesignPattern
 // ** ObjectPool Pattern : 재활용패턴
-
+// ** 오브젝트 풀링 -> 오브젝트 매니저
 
 int main(void)
 {
-	Prototype::GetInstance()->Initialize();
+	ULONGLONG time = GetTickCount64();
+
+	while (true)
 	{
-		Object* pObj = new Alatreon;
-		pObj->Start();
-		pObj->SetKey("Enemy");
-
-		// Prototype::GetInstance()->AddProtoTypeObject(pObj);
-		if (Prototype::GetInstance()->AddProtoTypeObject(pObj))
+		if (time < GetTickCount64())
 		{
-			// continue;
-			// break;
+			//system("cls");
+			time = GetTickCount64();
 
-			// return;
+			if (GetAsyncKeyState(VK_RETURN))
+			{
+				Prototype::GetInstance()->Initialize();
+				{
+					Object* pObj = new Alatreon;
+					pObj->Start();
+					pObj->SetKey("Enemy");
+
+					// Prototype::GetInstance()->AddProtoTypeObject(pObj);
+					if (Prototype::GetInstance()->AddProtoTypeObject(pObj))
+					{
+						// continue;
+						// break;
+						cout << "flase" << endl;
+						// return;
+					}
+
+				}
+
+				list<Object*>* ObjectList = ObjectPool::GetInstance()->GetDesableObjectList("Alatreon");
+
+				if (ObjectList == nullptr)
+				{
+					//** 리스트 추가
+					cout << "ObjectList == nullptr" << endl;
+					Object* pObj = new Alatreon;
+					pObj->Start();
+					ObjectPool::GetInstance()->addEnableObjectList(pObj);
+				}
+				else
+				{
+					if (!ObjectList->empty())
+					{
+						// ** 값이 있다면
+						// ** DesableList -> EnableList로 들고와라.
+
+					}
+					else
+					{
+						// ** Create
+						ObjectPool::GetInstance()->CreateObjectList();
+					}
+					// ** Desable 리스트 에서 Enable 리스트 로 switching
+				}
+			}
+
 		}
-
 	}
-
-	list<Object*>* ObjectList = ObjectPool::GetInstance()->GetDesableObjectList("Alatreon");
-
-	if (ObjectList == nullptr)
-	{
-		//** 리스트 추가
-		cout << "ObjectList == nullptr" << endl;
-		Object* pObj = new Alatreon;
-		pObj->Start();
-		ObjectPool::GetInstance()->addEnableObjectList(pObj);
-	}
-	else
-	{
-		if (!ObjectList->empty())
-		{
-			// ** 값이 있다면
-			// ** DesableList -> EnableList로 들고와라.
-
-		}
-		else
-		{
-			// ** Create
-			ObjectPool::GetInstance()->CreateObjectList();
-		}
-		// ** Desable 리스트 에서 Enable 리스트 로 switching
-	}
+	
+	
 
 
 	/*
