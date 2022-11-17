@@ -152,6 +152,8 @@
     <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CursorManager.h" />
+    <ClInclude Include="DatatManager.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Enum.h" />
     <ClInclude Include="Headers.h" />

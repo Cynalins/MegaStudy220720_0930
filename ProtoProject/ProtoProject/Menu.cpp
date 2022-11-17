@@ -12,14 +12,14 @@ Menu::~Menu()
 
 void Menu::Start()
 {
-	cout << "Menu" << endl;
-	if (GetAsyncKeyState(VK_RETURN))
-		SceneManager::GetInstance()->SetScene(Scene_ID::STAGEID);
+	
 }
 
 void Menu::Update()
 {
-
+	cout << "Menu" << endl;
+	if (GetAsyncKeyState(VK_RETURN))
+		SceneManager::GetInstance()->SetScene(Scene_ID::STAGEID);
 }
 
 void Menu::Render()

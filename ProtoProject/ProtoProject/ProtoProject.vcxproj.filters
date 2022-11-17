@@ -49,6 +49,12 @@
     <Filter Include="소스 파일\Manager\InputMAnager">
       <UniqueIdentifier>{79d7e7ca-43f3-46ee-9120-a775a5fdba2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Manager\CursorManager">
+      <UniqueIdentifier>{2e8f2b5b-4ef1-43d2-978d-e7f88e61fb11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Manager\DataManager">
+      <UniqueIdentifier>{5d06f5e3-bfb6-4591-9a52-df94a65e4a61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -127,6 +133,12 @@
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>소스 파일\Manager\InputMAnager</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorManager.h">
+      <Filter>소스 파일\Manager\CursorManager</Filter>
+    </ClInclude>
+    <ClInclude Include="DatatManager.h">
+      <Filter>소스 파일\Manager\DataManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
