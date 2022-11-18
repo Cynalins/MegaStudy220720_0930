@@ -1,6 +1,5 @@
 #include "Stage.h"
 #include "SceneManager.h"
-#include "InputManager.h"
 #include "CursorManager.h"
 #include "Player.h"
 
@@ -14,16 +13,20 @@ Stage::~Stage()
 
 void Stage::Start()
 {
+	
 	pPlayer = new Player;
 	pPlayer->Start();
+	
 }
 
 void Stage::Update()
 {
 	cout << "Stage" << endl;
-
+	
 	pPlayer->Update();
 	
+	if (GetAsyncKeyState('G'))
+		SceneManager::GetInstance()->SetScene(Scene_ID::EXITID);
 	
 	/*
 	if (GetAsyncKeyState(VK_RETURN))
@@ -33,7 +36,9 @@ void Stage::Update()
 
 void Stage::Render()
 {
+	/*
 	pPlayer->Render();
+	*/
 	/*
 	InputManager::GetInstance()->InputKey();
 	name = InputManager::GetInstance()->GetwKey();

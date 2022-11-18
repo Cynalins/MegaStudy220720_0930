@@ -18,7 +18,7 @@ void Menu::Start()
 void Menu::Update()
 {
 	cout << "Menu" << endl;
-	if (GetAsyncKeyState(VK_RETURN))
+	if (GetAsyncKeyState('S'))
 		SceneManager::GetInstance()->SetScene(Scene_ID::STAGEID);
 }
 

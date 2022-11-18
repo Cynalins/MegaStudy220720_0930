@@ -6,9 +6,6 @@ class Stage : public Scene
 {
 private:
 	Object* pPlayer;
-protected:
-	string name;
-	Trans Info;
 public:
 	virtual void Start()override;
 	virtual void Update()override;
@@ -16,6 +13,6 @@ public:
 	virtual void Release()override;
 public:
 	Stage();
-	~Stage();
+	virtual ~Stage();
 };
 
