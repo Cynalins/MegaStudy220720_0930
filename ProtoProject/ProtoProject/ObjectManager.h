@@ -15,6 +15,8 @@ public:
 	}
 private:
 	list<Object*> ObjectList;
+public:
+	void Start();
 private:
 	ObjectManager();
 public:

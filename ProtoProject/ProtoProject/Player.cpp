@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "InputManager.h"
+#include "Prototype.h"
 
 Player::Player()
 {
@@ -7,6 +8,13 @@ Player::Player()
 
 Player::~Player()
 {
+}
+
+Object* Player::Initalize(const string& key)
+{
+	// ** 초기화 값이 있다면 초기화 진행
+	Key = key;
+	return this;
 }
 
 void Player::Start()
@@ -26,7 +34,7 @@ void Player::Update()
 
 void Player::Render()
 {
-
+	cout << Key << endl;
 }
 
 void Player::Release()

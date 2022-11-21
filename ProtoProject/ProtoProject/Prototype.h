@@ -1,6 +1,7 @@
 #pragma once
 #include "Headers.h"
 
+class Object;
 class Prototype
 {
 private:
@@ -13,9 +14,13 @@ public:
 		return Instance;
 	}
 private:
-	Prototype() { }
+	map<string, Object*> PrototypeObject;
 public:
-	~Prototype() { }
+	void Initialize();
+	Object* FindObject(string key);
+private:
+	Prototype();
+public:
+	~Prototype();
 };
 
-Prototype* Prototype::Instance = nullptr;
