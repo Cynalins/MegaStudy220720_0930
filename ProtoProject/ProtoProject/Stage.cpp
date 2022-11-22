@@ -3,6 +3,8 @@
 #include "CursorManager.h"
 #include "Player.h"
 #include "Prototype.h"
+#include "InputManager.h"
+#include "ObjectManager.h"
 
 Stage::Stage()
 {
@@ -42,7 +44,13 @@ void Stage::Start()
 	pPlayer = new Player;
 	pPlayer->Start();
 	*/
-	
+	Object* pObj = nullptr;
+	//FAILED(pObj)
+
+	DWORD key = InputManager::GetInstance()->GetwKey();
+
+	if(key & KEYID_ENTER)
+		ObjectManager::GetInstance()->Dist
 }
 
 void Stage::Update()
@@ -58,6 +66,7 @@ void Stage::Update()
 	if (GetAsyncKeyState(VK_RETURN))
 		SceneManager::GetInstance()->SetScene(Scene_ID::EXITID);
 	*/
+	
 }
 
 void Stage::Render()

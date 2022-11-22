@@ -43,6 +43,13 @@ void SceneManager::Update()
 
 void SceneManager::Render()
 {
+	DisableList;
+
+	for (auto iter = EnableList->begin(); iter != EnableList->end(); ++iter)
+	{
+		cout << " [ EnableList : " << iter->first << endl;
+
+	}
 	SceneState->Render();
 }
 

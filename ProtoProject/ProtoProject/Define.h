@@ -14,6 +14,23 @@ inline void Safe_Release(T* _Obj)
 cout << "Erorr : where (" << __FILE__ << ") " << __LINE__ << endl;\
 system("pause");)
 
+/*
+bool Failed()
+{
+	if()
+}
+
+#define FALED(std){\
+
+}
+*/
+#define FAILED(Obj) {\
+	if(Obj == nullptr)\
+	{
+		ErorrMessage(str)\
+	}\
+}
+
 const int KEYID_UP		= 0x00000001; // 1
 const int KEYID_DOWN	= 0x00000002; // 2
 const int KEYID_LEFT	= 0x00000004; // 4

@@ -17,6 +17,7 @@ public:
 private:
 	map<string, list<Object*>> EnableList;
 	map<string, list<Object*>> DisableList;
+	map<string, int> Counts;
 public:
 	map<string, list<Object*>> GetEnableList()
 	{
@@ -26,11 +27,11 @@ public:
 public:
 	void CreateObjecct(string key);
 
-	void FindObject();
+	void FindObjectList(string _key);
 	void Update();
 
-	Object* Pop(string _key);
-	void Erase();
+	Object* ObjectInsert(string _key);
+	void Erase(Object* _Obj);
 
 	void Release();
 private:

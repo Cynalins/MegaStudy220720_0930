@@ -1,5 +1,6 @@
 #include "ObjectPool.h"
 #include "Prototype.h"
+#include "Object.h"
 
 ObjectPool* ObjectPool::Instance = nullptr;
 
@@ -14,15 +15,42 @@ ObjectPool::~ObjectPool()
 
 void ObjectPool::CreateObjecct(string key)
 {
+	Object* ProtoObject = Prototype::GetInstance()->FindObject("Player");
 
+	//Counts.find(_key)->second
+
+	if (ProtoObject != nullptr)
+	{
+		list<Object*> temp;
+		for (int i = 0; i < 5; ++i)
+		{
+			temp.push_back(ProtoObject->Clone());
+			DisableList.insert(make_pair(_key, temp));
+		}
+		cout << "goto" << endl;
+		system("pause");
+		goto START;
+	}
+	else
+	{
+		for (int i = 0; i < 5; ++i)
+		{
+			Object* pObj = ProtoOBject
+		}
+	}
 }
 
-void ObjectPool::FindObject()
+void ObjectPool::FindObjectList(string _key)
 {
+	auto iter = DisableList.find(_key);
 
+	if (iter == DisableList.end())
+		return nullptr;
+
+	return iter->second;
 }
 
-Object* ObjectPool::Pop(string _key)
+Object* ObjectPool::ObjectInsert(string _key)
 {
 	auto iter = DisableList.find(_key);
 
@@ -30,8 +58,14 @@ Object* ObjectPool::Pop(string _key)
 
 	if (iter == DisableList.end())
 	{
-		// 持失
+		CREATE:
+		CreateObjecct(_key);
+		goto START;
 
+		ErrorMessage(__LINE__);
+		return nullptr;
+		// 持失
+		/*
 		Object* ProtoObject = Prototype::GetInstance()->FindObject("Player");
 
 		if (ProtoObject != nullptr)
@@ -39,27 +73,42 @@ Object* ObjectPool::Pop(string _key)
 			list<Object*> temp;
 			for (int i = 0; i < 5; ++i)
 			{
-				temp.push_back(PrototypeObject->Clone());
+				temp.push_back(ProtoObject->Clone());
 				DisableList.insert(make_pair(_key, temp));
 			}
-				goto START;
+			cout << "goto" << endl;
+			system("pause");
+			goto START;
 		}
 		else
 		{
 			return nullptr;
 		}	
+		*/
 	}
 	else
 	{
-		Object* pobj = iter->second.back();
-		iter->second.pop_back();
-		return pobj;
+		if (iter->empty())
+		{
+			Object* pobj = iter->second.back();
+			iter->second.pop_back();
+			return pobj;
+		}
+		else
+			goto CREATE;
 	}
 }
 
-void ObjectPool::Erase()
+void ObjectPool::Erase(Object* _Obj)
 {
+	auto iter = EnableList.find(_Obj->GetKey());
+	//auto iter = EnableList.find(_Obj->GetKey());
+	//auto iter = _Obj->GetSpace();
 
+
+	
+
+	
 }
 
 void ObjectPool::Update()

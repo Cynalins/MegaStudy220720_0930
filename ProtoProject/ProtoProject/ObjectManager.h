@@ -17,6 +17,8 @@ private:
 	list<Object*> ObjectList;
 public:
 	void Start();
+	void Initialize();
+	void EnableFormDisable(Object* _pObj);
 private:
 	ObjectManager();
 public:

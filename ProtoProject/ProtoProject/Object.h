@@ -6,6 +6,9 @@ class Object
 protected:
 	Trans Info;
 	string Key;
+
+	list<Object*>* Space;
+	int Index;
 public:
 	virtual Object* Initalize(const string& key)PURE;
 	virtual void Start()PURE;
@@ -15,9 +18,11 @@ public:
 	virtual Object* Clone()PURE;
 public:
 	string GetKey() { return Key; }
+	void SetSpace(list<Object*>* _Space) { Space = _Space; }
+	list<Object*>* GetSpace() { return Space; }
 public:
 	Object();
-	Object(const Trans& _Info) : Info(_Info) {}
+	Object(const Trans& _Info) : Info(_Info), Space(nullptr), Index(0) {}
 	virtual ~Object();
 };
 

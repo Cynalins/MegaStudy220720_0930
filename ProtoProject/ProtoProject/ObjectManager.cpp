@@ -38,3 +38,17 @@ void ObjectManager::Start()
 	EnableList->insert(make_pair(pobj->GetKey(), pobj));
 	*/
 }
+
+void ObjectManager::Initialize()
+{
+	EnableList = ObjectPool::GetInstance()->GetEnableList();
+	DisableList = ObjectPool::GetInstance()->GetDisableList();
+}
+
+void ObjectManager::EnableFormDisable(Object* _pObj)
+{
+	//**테스트 코드========================
+	auto pObj = EnableList->find("Player")->second.front();
+	//**테스트 코드========================
+	ObjectPool::GetInstance()->Erase(_pObj);
+}
